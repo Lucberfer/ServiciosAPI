@@ -17,6 +17,7 @@ public class MainController {
     @FXML
     private TextArea responseArea;
 
+    // Handles the "Send Email" button click
     @FXML
     public void handleSendEmail() {
         String to = recipientField.getText().trim();
@@ -24,7 +25,7 @@ public class MainController {
         String message = messageField.getText().trim();
 
         if (to.isEmpty() || subject.isEmpty() || message.isEmpty()) {
-            responseArea.setText("Todos los campos son obligatorios.");
+            responseArea.setText("All fields are required.");
             return;
         }
 

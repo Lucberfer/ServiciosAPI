@@ -7,18 +7,27 @@ import jakarta.mail.internet.MimeMessage;
 import java.util.Properties;
 
 public class EmailService {
-    private final String username = "idiomaensamblador@gmail.com"; // introducir correo
-    private final String password = "*************"; //introducir password
+    private final String username = "idiomaensamblador@gmail.com"; // Sender's email
+    private final String password = "*************"; // Use an app password for security
+
+    /**
+     * Sends an email using Gmail SMTP.
+     *
+     * @param to          Recipient's email.
+     * @param subject     Email subject.
+     * @param messageBody Email body content.
+     * @return Success or error message.
+     */
     public String sendEmail(String to, String subject, String messageBody) {
         try {
-            // Configuración del servidor SMTP de Gmail
+            // SMTP configuration
             Properties props = new Properties();
             props.put("mail.smtp.auth", "true");
             props.put("mail.smtp.starttls.enable", "true");
             props.put("mail.smtp.host", "smtp.gmail.com");
             props.put("mail.smtp.port", "587");
 
-            // Crear la sesión
+            // Authenticate session
             Session session = Session.getInstance(props, new Authenticator() {
                 @Override
                 protected PasswordAuthentication getPasswordAuthentication() {
@@ -26,18 +35,19 @@ public class EmailService {
                 }
             });
 
-            // Construcción del mensaje
+            // Create and configure email message
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(username));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
             message.setSubject(subject);
             message.setText(messageBody);
 
-            // Envío del mensaje
+            // Send email
             Transport.send(message);
-            return "Correo enviado exitosamente a " + to;
+
+            return "Email successfully sent to " + to;
         } catch (Exception e) {
-            return "Error al enviar el correo: " + e.getMessage();
+            return "Error sending email: " + e.getMessage();
         }
     }
 }

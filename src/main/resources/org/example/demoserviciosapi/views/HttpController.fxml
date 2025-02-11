@@ -10,18 +10,18 @@
       alignment="CENTER"
       prefWidth="500"
       prefHeight="400"
-      stylesheets="@style.css">
+      stylesheets="@style.css"> <!-- Apply external stylesheet -->
 
     <Label text="Destinatario:"/>
-    <TextField fx:id="recipientField" promptText="Introduce el correo del destinatario" />
+    <TextField fx:id="recipientField" promptText="Introduce el correo del destinatario"/>
 
     <Label text="Asunto:"/>
-    <TextField fx:id="subjectField" promptText="Introduce el asunto" />
+    <TextField fx:id="subjectField" promptText="Introduce el asunto"/>
 
     <Label text="Mensaje:"/>
-    <TextArea fx:id="messageField" prefHeight="150" wrapText="true" promptText="Escribe tu mensaje aquí..." />
+    <TextArea fx:id="messageField" prefHeight="150" wrapText="true" promptText="Escribe tu mensaje aquí..."/>
 
-    <Button text="Enviar Correo" onAction="#handleSendEmail" />
+    <Button text="Enviar Correo" onAction="#handleSendEmail"/>
 
     <TextArea fx:id="responseArea" prefHeight="50" editable="false" wrapText="true"/>
 </VBox>
