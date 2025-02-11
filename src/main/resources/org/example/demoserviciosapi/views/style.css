@@ -1,0 +1,48 @@
+/* 🔹 Fondo oscuro con elegancia barroca */
+.root {
+    -fx-background-color: #2b2b2b; /* Negro grisáceo */
+    -fx-padding: 20;
+}
+
+/* 🔹 Tipografía sobria */
+.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #d4af37; /* Dorado barroco */
+    -fx-font-family: "Times New Roman", Serif;
+}
+
+/* 🔹 Campos de texto con un toque elegante */
+.text-field, .text-area {
+    -fx-background-color: #1e1e1e; /* Negro profundo */
+    -fx-text-fill: white;
+    -fx-border-color: #d4af37; /* Dorado sutil */
+    -fx-border-width: 1px;
+    -fx-padding: 5;
+    -fx-font-family: "Garamond", Serif;
+}
+
+/* 🔹 Botón con estilo clásico */
+.button {
+    -fx-background-color: #3e3e3e; /* Gris oscuro */
+    -fx-text-fill: #d4af37; /* Dorado */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-color: #d4af37;
+    -fx-border-width: 1px;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-font-family: "Times New Roman", Serif;
+}
+
+.button:hover {
+    -fx-background-color: #d4af37;
+    -fx-text-fill: #2b2b2b;
+}
+
+/* 🔹 Área de respuesta con un marco sobrio */
+.text-area {
+    -fx-border-color: #d4af37;
+    -fx-border-width: 1px;
+    -fx-background-insets: 0;
+}

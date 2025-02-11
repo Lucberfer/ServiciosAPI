@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.demoserviciosapi.controller.MainController"
+      spacing="10"
+      alignment="CENTER"
+      prefWidth="500"
+      prefHeight="400"
+      stylesheets="@style.css">
+
+    <Label text="Destinatario:"/>
+    <TextField fx:id="recipientField" promptText="Introduce el correo del destinatario" />
+
+    <Label text="Asunto:"/>
+    <TextField fx:id="subjectField" promptText="Introduce el asunto" />
+
+    <Label text="Mensaje:"/>
+    <TextArea fx:id="messageField" prefHeight="150" wrapText="true" promptText="Escribe tu mensaje aquí..." />
+
+    <Button text="Enviar Correo" onAction="#handleSendEmail" />
+
+    <TextArea fx:id="responseArea" prefHeight="50" editable="false" wrapText="true"/>
+</VBox>
